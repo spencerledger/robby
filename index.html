@@ -7,12 +7,24 @@
     <link rel="icon" href="BigMac.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        @keyframes backgroundChange {
+            0% { background-color: #f4f4f4; }
+            12.5% { background-color: #ffebee; }
+            25% { background-color: #ffe0b2; }
+            37.5% { background-color: #fff9c4; }
+            50% { background-color: #e8f5e9; }
+            62.5% { background-color: #e3f2fd; }
+            75% { background-color: #ede7f6; }
+            87.5% { background-color: #fce4ec; }
+            100% { background-color: #f4f4f4; }
+        }
+
         body {
             font-family: 'Open Sans', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            animation: backgroundChange 10s infinite;
             color: #333;
         }
 
@@ -87,5 +99,16 @@
             </div>
         </div>
     </main>
+
+    <script>
+        // Alternate tab title every 2.5 seconds
+        const titles = ["Luke Robinson", "spencers.zone"];
+        let titleIndex = 0;
+
+        setInterval(() => {
+            document.title = titles[titleIndex];
+            titleIndex = (titleIndex + 1) % titles.length;
+        }, 2000);
+    </script>
 </body>
 </html>
