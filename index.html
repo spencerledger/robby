@@ -1,0 +1,17 @@
+<script>
+  // Set your password here
+  var correctPassword = "BuilderMan69";
+
+  // Prompt the user for the password
+  var userPassword = prompt("Enter the password:");
+
+  // Check if the entered password is correct
+  if (userPassword === correctPassword) {
+    // If the password is correct, redirect to the main page
+    window.location.href = "https://music.spencers.zone/mainpage";
+  } else {
+    // If the password is incorrect, show an alert and redirect to another page
+    alert("Incorrect password. You will be redirected.");
+    window.location.href = "https://www.spencers.zone/";  // You can change this to any fallback page
+  }
+</script>
